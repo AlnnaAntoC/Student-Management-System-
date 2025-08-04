@@ -1,0 +1,77 @@
+<!-- <html>
+<head> -->
+<!-- <title>Javascript Login Form Validation</title> -->
+<!-- Include CSS File Here -->
+<!-- <link rel="stylesheet" href="css/style.css"/> -->
+<!-- Include JS File Here -->
+<!-- <script src="/static/assets/js/validate.js"></script> -->
+<!-- </head> -->
+<!-- <body> -->
+<!-- <div class="container"> -->
+<!-- <div class="main"> -->
+<!-- <h2>Javascript Login Form Validation</h2> -->
+<!-- <form id="form_id" method="post" name="myform">
+<label>User Name :</label>
+<input type="text" name="username" id="username"/>
+<label>Password :</label>
+<input type="password" name="password" id="password"/>
+<input type="button" value="Login" id="submit" onclick="validate()"/>
+</form> -->
+<!-- <span><b class="note">Note : </b>For this demo use following username and password. <br/><b class="valid">User Name : Formget<br/>Password : formget#123</b></span>
+</div>
+</div>
+</body>
+</html> -->
+
+
+<!-- {% extends 'auth.html' %}
+{% block title %}
+login
+{% endblock title %}
+{% block content %} -->
+ <h1 class="mb-4 pb-0"><span>Login</span> </h1>
+ <h6 style="color:red"><i>**Login for Teachers, Please login to enter marks !!</i></h6>
+
+<!-- {% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+
+<div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+    {{message}}
+
+
+</div> -->
+
+
+  <!-- {% endfor %}
+  {% endif %}
+  {% endwith %} -->
+<link rel="stylesheet" href="css/style.css"/>
+<script src="/static/assets/js/validate.js"></script>
+<form id="form_id" method="post" name="myform">
+    <label style="color: white;">User Name :</label><br>
+    <input style="border-radius:5%;height: 3em;" type="text" name="username" id="username"/><br><br>
+    <label style="color:white">Password :</label><br>
+    <input style="border-radius:5%;height: 3em;" type="password" name="password" id="password"/><br><br><br>
+    <input style="border-radius: 5%;padding: 0.5em;width: 12em;background-color:rgb(221, 46, 46);color: rgb(226, 224, 224);border-color: white;" type="button" value="Log In" id="submit" onclick="validate()"/>
+    </form> <br>
+
+
+<!-- <form class=" text-white py-3 px-3" method="post">
+  <div class="form-group">
+    <label for="username">UserName</label>
+    <input type="text" class="form-control mb-3" id="uname" name="username" required>
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" name="password" required>
+  </div>
+<br> -->
+  <!-- <input type="submit" class="form-control bg-danger text-white" onclick="validate()">Login</button> -->
+   <!-- <p class="mb-2 pb-0">New User?</p> -->
+    
+      <!-- <a href="/signup" class="about-btn scrollto">Signup</a> -->
+<!-- </form> -->
+     
+<!-- {% endblock content %} -->
