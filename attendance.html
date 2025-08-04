@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% block title %}
+Add Attendance
+{% endblock title %}
+
+
+
+{% block body %}
+ <h3 class="text-center"><span>Add Attendance Details</span> </h3>
+  
+{% with messages=get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+
+<div class="alert alert-{{category}} alert-dismissible fade show" role="alert">
+    {{message}}
+
+
+</div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+<br>
+<div class="container">
+
+<div class="row">
+
+<div class="col-md-4"></div>
+<div class="col-md-4">
+
+<form action="/addattendance" method="post">
+<div class="form-group">
+  <select class="form-control" id="rollno" name="rollno" required>
+        <option selected>Select RollNo</option>
+        {% for r in query %}
+        <option value="{{r.rollno}}">{{r.rollno}}</option>
+        {% endfor %}
+  </select>
+ </div>
+<br>
+
+<!-- <div class="form-group">
+<label for="attendance">Attendance Percentage</label>
+<input type="number" class="form-control" name="attend" id="attend">
+</div> -->
+<br>
+<table style="border:2px solid black;">
+  <tr>
+    <th>
+      <div class="form-group" style="margin-left: 0.5em;padding: 0.25em;">
+        <!-- <label for="attendance">Attendance %</label> -->
+        <!-- <textarea name="attend" id="attend" cols="4" rows="1"></textarea> -->
+        Attend%<br><hr><input type="text" class="form-control" name="attend" id="attend" style="padding: 0.5em">
+      </div>
+    </th><br>
+    <th>
+      <div class="form-group" style="margin-left: 0.5em">
+        <!-- <label for="sub1">Artificial Intelligence</label> -->
+        <!-- <textarea name="sub1" id="sub1" cols="4" rows="1"></textarea> -->
+       Graph<br><hr> <input type="text" class="form-control" name="sub1" id="sub1">
+      </div>
+    </th>
+    <th>
+      <div class="form-group" style="margin-left: 0.5em"> 
+        <!-- <label for="sub2">ADBMS - DATABASE</label> -->
+        <!-- <textarea name="sub2" id="sub2" cols="4" rows="1"></textarea> -->
+        Comp<br><hr><input type="text" class="form-control" name="sub2" id="sub2">
+      </div>
+    </th>
+    <th>
+      <div class="form-group" style="margin-left: 0.5em">
+        <!-- <label for="sub3">DAA-Algorithm</label> -->
+        <!-- <textarea name="sub3" id="sub3" cols="4" rows="1"></textarea> -->
+        Crypt<br><hr><input type="text" class="form-control" name="sub3" id="sub3">
+      </div>
+    </th>
+    <th>
+      <div class="form-group" style="margin-left: 1em">
+        <!-- <label for="sub4">Java Program</label> -->
+        <!-- <textarea name="sub4" id="sub4" cols="4" rows="1"></textarea> -->
+        Elect2<br><hr><input type="text" class="form-control" name="sub4" id="sub4">
+      </div>
+    </th> 
+    <th>
+      <div class="form-group" style="margin-left: 1em">
+        <!-- <label for="sub5">DM</label> -->
+        <!-- <textarea name="sub5" id="sub5" cols="4" rows="1"></textarea> -->
+        Elect3<br><hr><input type="text" class="form-control" name="sub5" id="sub5">
+      </div>
+    </th> 
+    <th>
+      <div class="form-group" style="margin-left: 1em;margin-right: 0.5em;">
+        <!-- <label for="sub6">Java/ADBMS Lab</label> -->
+        <!-- <textarea name="sub6" id="sub6" cols="4" rows="1"></textarea> -->
+        MProj<br><hr><input type="text" class="form-control" name="sub6" id="sub6">
+      </div>
+    </th> 
+  </tr>
+</table>
+<br><br>
+  <button type="submit" class="btn btn-danger btn-sm btn-block">Add Details</button>
+</form>
+<br>
+<br>
+</div>
+
+<div class="col-md-4"></div>
+
+</div></div>
+
+
+
+{% endblock body %}
